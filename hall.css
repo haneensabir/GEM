@@ -16,8 +16,8 @@ h1,.h{
   transition: 0.3s;
   display: flex;
   flex-direction: column;
- border-radius: 15px;
- overflow: hidden;
+  border-radius: 15px;
+  overflow: hidden;
 }
 .ss img {
   width: 100%;
@@ -54,86 +54,32 @@ h1,.h{
 body{
   background: linear-gradient(180deg, #f8f6f1 0%, #f1ede5 100%);
 }
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    margin: auto;
-    padding: 20px;
-     background:#FAF9F6;
-     box-shadow: 0 2px 10px rgba(0,0, 0, 0.05);
-}
-.logo{
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-.navlist{
-    list-style :none;
-    display: flex;
-}
-.navlist li{
-    margin: 0 10px;
-}
-.navlist a{
-    font-weight: 600;
-    font-size: 15px;
-    transition: 0.3s;
-    text-decoration: none;
-    color: #4A3F35;
-
-}
-.navlist a:hover{
-    color:#C5A059;
-}
-header{
-    padding: 3px;
-}
-
-
-/* 
-body{ background: #121212; }
- .card {
+[data-theme="dark"] body{ background: #121212; }
+[data-theme="dark"] .ss {
     background-color: #1E1E1E; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
     border: 1px solid #333; 
 }
-.info h3 {
+[data-theme="dark"] .info h3 {
     color: #D4AF37; 
 }
-body {
+[data-theme="dark"] body {
     background-color: #121212; 
     color: #E0E0E0; 
 }
 
-h1, .h {
+[data-theme="dark"] h1, .h {
     color: #D4AF37; 
 }
-.info p {
+[data-theme="dark"] .info p {
     color: #B0B0B0; 
 }
-.ss:hover {
+[data-theme="dark"] .ss:hover {
     border-color: #D4AF37;
     transform: translateY(-5px);
-} */
-/* .haneen {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Gemini_Generated_Image_isz9fmisz9fmisz9.png');
-  height: 300px; 
-  background-size: cover; 
-  background-position: center; 
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center; 
+} 
+[data-theme="dark"] .haneen {
   text-align: center;
   color: white;
   margin: 10px;
 }
-.haneen-content h1 {
-  font-size: 3rem;
-  margin: 20px 0;
-  font-family: serif; 
-} */
