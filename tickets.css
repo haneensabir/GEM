@@ -1,0 +1,252 @@
+body{
+    margin: 0;
+    font-family: Arial;
+    color :white;/*black*/
+}
+.left{
+    position:absolute;
+    left:40px;
+    top:50%;
+   transform:translateY(-50%);
+    max-width: 400px;
+    
+}
+.left h2{
+    font-size: 40px;
+    font-weight: 0;
+    font-family: bold;
+    margin-bottom: 20px;
+}
+.left p {
+  color: #bbb;
+  max-width: 400px;
+  font-size:20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.box{
+    position: absolute;
+  right: 60px;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 420px;
+  background: rgba(241, 236, 236, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);/*(0,0,0,0.2)*/
+  animation: fadeIn 2s ease-out;
+  border: 1px solid rgba(255,255,255,0.05);
+ 
+}@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(20); }
+}
+tbody tr {
+    transition: background 0.2s ease;
+}
+tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03); /* Subtle highlight when hovering over a row */
+}
+/* TITLE */
+.box h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* DAYS STYLE */
+.days {
+  text-align: center;
+  padding-bottom: 10px;
+  
+}
+
+.days span {
+  display: inline-block;
+  background: #2a2a2a;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.days .active {
+  background: gold;
+  color: black;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  text-align: left;
+  color: #aaa;
+  font-size: 20px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+/* PRICE ALIGN */
+.price {
+  text-align: center;
+  font-weight: 500;
+}
+.quantity {
+  text-align: right;
+}
+
+/* COUNTER BUTTONS */
+.counter-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: right;
+  font-size:14px;
+}
+
+.counter-btn:hover {
+  background: #555;
+}
+
+/* TOTAL ROW */
+.total-row td {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size:16px;
+}
+
+.total-label {
+  font-weight: bold;
+}
+
+/* PAYMENT BUTTON */
+.payment-btn {
+  width: 100%;
+  padding: 8px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top:5px;
+  
+}
+
+.payment-btn:hover {
+  background: #e6c200;
+  
+}
+.box h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: white;
+}
+    
+     
+
+
+.days span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 3px;
+  background: #2a2a2a;
+  border-radius: 6px;
+    font-size: 12px;}
+    .date-input {
+  width: 100%;
+  padding: 10px;
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* calendar icon color fix (for Chrome) */
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* focus effect */
+.date-input:focus {
+  outline: none;
+  background: #333;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  background: #1f4158; /* dark blue */
+  color: white;
+}
+.header__logo{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+}
+.counter-btn:active {
+    transform: scale(0.9); /* Shrinks when clicked */
+}
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .nav-bar {
+        flex-direction: column; /* Stack logo and links vertically */
+        gap: 15px;
+    }
+
+    .navigation {
+        display: flex;
+        flex-wrap: wrap; /* Let links wrap to the next line */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .box {
+        width: 95%; /* Take up more screen space on small devices */
+        padding: 20px;
+        margin: 10px auto;
+    }
+
+    /* Make the table scrollable if it's too wide */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    h2, h1 {
+        font-size: 1.5rem; /* Shrink text so it fits */
+    }
+}
+body.dark{
+  .box{background: rgba(30, 30, 30, 0.90); }
+  color:black
+}
+body.light{
+ .box{ background: rgba(241, 236, 236, 0.2);}
+  color: white;
+}
