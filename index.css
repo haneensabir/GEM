@@ -84,7 +84,6 @@ ul li a:hover {
 body, html {
     margin: 0;
     padding: 0;
-    /* height: 100%;  تم التعليق عليها للسماح بالسكروول */
     font-family: 'Serif', 'Times New Roman', serif;
 }
 
