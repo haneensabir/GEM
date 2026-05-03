@@ -290,3 +290,6 @@ body[data-theme="dark"] .modebutton {
     border-color: #C5A059;
     color: #C5A059;
 }
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
