@@ -58,6 +58,10 @@ nav ul li a:hover {
     color: #C5A059;
 }
 
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
+
 .registration {
     display: flex;
     align-items: center;
