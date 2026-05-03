@@ -148,13 +148,19 @@ iframe{
   border-radius:15px;
   margin-top:20px;
 }
-footer{
+/* footer{
   text-align:center;
   padding:25px;
   background:#020617;
   color:#aaa;
+} */
+footer {
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #d4af37;
 }
-
 
 .stars span{
   font-size:30px;
