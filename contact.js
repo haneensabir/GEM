@@ -1,3 +1,5 @@
+
+
 function validateForm() {
   console.log("contact form");
 
@@ -93,4 +95,5 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.setAttribute("data-theme", savedTheme);
     }
 
+});
 });
