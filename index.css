@@ -310,7 +310,7 @@ footer {
     color: var(--text-color);
 }
 
-nav {
+/* nav {
     background: var(--nav-bg);
 }
 
@@ -340,4 +340,4 @@ nav {
     border-radius: 55px;
     cursor: pointer;
     margin-left: 20px;
-}
+} */
