@@ -16,14 +16,14 @@ body.dark-mode {
     --card-border: #444;
 }
 /* ---------------------------------- */
-
+/* 
 @media (max-width: 600px) {
     nav ul {
         flex-wrap: wrap; 
         gap: 10px; 
         justify-content: center;
     }
-}
+} */
 
 body {
     background-color: var(--bg-color); 
