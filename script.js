@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     if (found) {
         alert("Login successful!");
+        localStorage.setItem("userToken", "true");
         window.location.href = "index.html";
 
 
