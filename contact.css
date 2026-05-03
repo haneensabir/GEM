@@ -274,10 +274,10 @@ nav {
     transition: 0.3s;
 }
 
-.modebutton:hover {
+/* .modebutton:hover {
   background: rgb(8, 8, 8);
   color: rgb(253, 252, 252);
-}
+} */
 body[data-theme="dark"] {
     background: #121212 !important;
     color: #E0E0E0 !important;
