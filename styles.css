@@ -117,6 +117,15 @@ body[data-theme="dark"] .box {
 }
 
 body[data-theme="dark"] {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("https://deltalighting.me/wp-content/uploads/2023/09/Grand-Egyptian-Museum-scaled.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+/* body[data-theme="dark"] {
      margin:0;
     min-height: 100dvh;
     background-image: url("https://deltalighting.me/wp-content/uploads/2023/09/Grand-Egyptian-Museum-scaled.jpg");
@@ -135,7 +144,7 @@ body[data-theme="dark"]::before {
     background-color: rgba(0,0,0,0.3);
     z-index: -1;
     filter: blur(2px);
-}
+} */
 
 
 form {
