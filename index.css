@@ -16,14 +16,14 @@ body.dark-mode {
     --card-border: #444;
 }
 /* ---------------------------------- */
-/* 
+
 @media (max-width: 600px) {
     nav ul {
         flex-wrap: wrap; 
         gap: 10px; 
         justify-content: center;
     }
-} */
+}
 
 body {
     background-color: var(--bg-color); 
@@ -33,7 +33,7 @@ body {
     margin: 0;
 }
 
-/* nav ul {
+nav ul {
     display: flex;
     justify-content:center;
     gap:20px;
@@ -79,7 +79,7 @@ ul li a {
 
 ul li a:hover {
     color: #C5A059;
-} */
+}
 header {
     display: flex;
     justify-content: space-between; 
@@ -310,7 +310,7 @@ footer {
     color: var(--text-color);
 }
 
-/* nav {
+nav {
     background: var(--nav-bg);
 }
 
@@ -340,4 +340,4 @@ footer {
     border-radius: 55px;
     cursor: pointer;
     margin-left: 20px;
-} */
+}
