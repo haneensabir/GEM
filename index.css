@@ -334,3 +334,6 @@ body[data-theme="dark"] .hero-content h1 {
 body[data-theme="dark"] .museum-highlights{
     background-color: #121212 !important;;
 }
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
