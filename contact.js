@@ -98,33 +98,4 @@ function submitFeedback() {
 }
 
 
-
-// function displayFeedback() {
-//   let list = document.getElementById('feedbacklist');
-
-//   if (!list) return; 
-
-//   list.innerHTML = "";
-
-//   let data = JSON.parse(localStorage.getItem('feedbacks')) || [];
-
-//   data.forEach(f => {
-//     let div = document.createElement('div');
-
-//     div.style.background = "#111827";
-//     div.style.padding = "10px";
-//     div.style.marginTop = "10px";
-//     div.style.borderRadius = "10px";
-
-//     div.innerHTML = `
-//       <p><b>${f.name}</b> - ${'★'.repeat(f.rating)}</p>
-//       <p>${f.msg}</p>
-//       <small style="color:gray">${f.date}</small>
-//     `;
-
-//     list.appendChild(div);
-//   });
-// }
-
-
 // window.onload = displayFeedback;
