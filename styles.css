@@ -108,6 +108,10 @@ body[data-theme="dark"] .modebutton {
     color: #C5A059;
 }
 
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
+
 body[data-theme="dark"] .box3 {
     background: rgba(0,0,0,0.4);
     border: 1px solid rgba(255,255,255,0.1);
