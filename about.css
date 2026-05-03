@@ -164,3 +164,6 @@ body[data-theme="dark"] .modebutton {
 body[data-theme="dark"] {
     background: #121212 !important;
 }
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
