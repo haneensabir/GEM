@@ -90,8 +90,8 @@ body[data-theme="dark"] nav ul li a:hover {
 
 
 body[data-theme="dark"] {
-    background: #121212 !important;
-    color: #E0E0E0 !important;
+    background: #121212;
+    color: #E0E0E0;
 }
 
 body[data-theme="dark"] header {
