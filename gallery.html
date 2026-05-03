@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,29 +10,30 @@
 <div class="full">
 <body>
     
-<header>
+<div>
+    <header>
     <div class="logo">
-        <h2><b> GEM </b></h2>
+        <h1><b> GEM </b></h1>
     </div>
-    <nav>
-    <ul>
-       <li><a href="#"> Home </a></li>
-       <li><a href="#"> Halls </a></li>
-       <li><a href="gallery.html"> Collection </a></li>
-       <li><a href="#"> Tickets </a></li>
-       <li><a href="#"> About </a></li>
-       <li><a href="#"> Contact Us </a></li>
-    </ul>
-</nav>
-<div class="container">
-    <button class="modebutton"> Mode </button>
-</div>
 
-<div class="registration">
-      <a class="navbutton" href="#"> Login </a>
-      <a class="navbutton" href="#"> Sign Up </a>
-</div>
+    <nav>
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="hall.html"> Halls </a></li>
+            <li><a href="#"> Collection </a></li>
+            <li><a href="tickets.html"> Tickets </a></li>
+            <li><a href="#"> About </a></li>
+            <li><a href="contact.html"> Contact Us </a></li>
+        </ul>
+    </nav>
+   <div class="registration">
+      <button class="modebutton"> Mode </button>
+      <a id="loginBtn" class="navbutton" href="login.html"> Login </a>
+      <a id="signupBtn" class="navbutton" href="signup.html"> Sign Up </a>
+      <a id="logoutBtn" class="navbutton" href="#" style="display: none;"> Logout </a>
+    </div>
 </header>
+
 
 <section class="head">
     <h1>Grand Egyptian Museum</h1>
@@ -165,62 +166,6 @@
  </div>
 
 <script>
-const modeBtn = document.querySelector('.modebutton');
-
-function checkTheme() {
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'dark') {
-        document.body.setAttribute("data-theme", "dark");
-        modeBtn.textContent = "Light";
-    } else {
-        document.body.setAttribute("data-theme", "light");
-        modeBtn.textContent = "Dark";
-    }
-}
-
-checkTheme();
-
-modeBtn.addEventListener('click', () => {
-    let currentTheme = document.body.getAttribute("data-theme");
-
-    if (currentTheme === "dark") {
-        document.body.setAttribute("data-theme", "light");
-        localStorage.setItem('theme', 'light');
-        modeBtn.textContent = "Dark";
-    } else {
-        document.body.setAttribute("data-theme", "dark");
-        localStorage.setItem('theme', 'dark');
-        modeBtn.textContent = "Light";
-    }
-});
-
-// const modeBtn = document.querySelector('.modebutton');
-
-// function checkTheme() {
-//     const savedTheme = localStorage.getItem('theme');
-    
-//     if (savedTheme === 'dark') {
-//         document.body.classList.add('dark-mode');
-//         modeBtn.textContent = "Light"; 
-//     } else {
-//         modeBtn.textContent = "Mode";
-//     }
-// }
-
-// checkTheme();
-
-// modeBtn.addEventListener('click', () => {
-//     document.body.classList.toggle('dark-mode');
-    
-//     if (document.body.classList.contains('dark-mode')) {
-//         localStorage.setItem('theme', 'dark');
-//         modeBtn.textContent = "Light";
-//     } else {
-//         localStorage.setItem('theme', 'light');
-//         modeBtn.textContent = "Dark";
-//     }
-// });
 
 const input = document.getElementById("searchInput");
 const items = document.querySelectorAll(".gallery-item");
@@ -265,5 +210,11 @@ function closeModal() {
 }
 </script>
 </body>
+<footer>
+            <bold>All rights reserved &copy; 2026</bold><br><br>
+        </footer>
+        <script src="index.js"></script>
 </html>
 </div>
+
+    
