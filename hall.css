@@ -155,5 +155,7 @@ body[data-theme="dark"] .ss:hover {
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2); 
     transform: translateY(-5px);
 }
-
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
 
