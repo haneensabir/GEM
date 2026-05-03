@@ -337,3 +337,14 @@ body[data-theme="dark"] .museum-highlights{
 body[data-theme="dark"] nav ul li a:hover {
     color: #C5A059;
 }
+.imgbutton {
+    color: white;
+    text-decoration: none;
+    background-color: #d39014;
+    padding: 15px 30px;
+    border-radius: 60px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
