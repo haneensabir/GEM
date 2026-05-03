@@ -16,14 +16,14 @@ body.dark-mode {
     --card-border: #444;
 }
 /* ---------------------------------- */
-
+/* 
 @media (max-width: 600px) {
     nav ul {
         flex-wrap: wrap; 
         gap: 10px; 
         justify-content: center;
     }
-}
+} */
 
 body {
     background-color: var(--bg-color); 
@@ -309,59 +309,12 @@ footer {
 .pp {
     color: var(--text-color);
 }
-nav ul {
-    display: flex;
-    justify-content:center;
-    gap:20px;
-    list-style: none;
-    padding: 5px;
-    align-items: center;
-}
 
-.logo {
-    align-items: left;
-    color:#d39014;
-    padding:0px;
-    margin-right: 150px;
-    margin-left: 80px;
-}
-
-header {
-    display: flex;
-    margin: 0px;
-    width: 100%;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-    align-items: center;   
-    background: var(--nav-bg); 
-}
-
-ul li {
-    display: block;
-    list-style: none;
-    text-align: center;
-    justify-content: center; 
-    font-family: 'Scheherazade New', serif;
-}
-
-ul li a {  
-    text-decoration: none;
-    color: var(--text-color); 
-    padding: 5px 8px;
-    border-radius: 20px;
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    justify-content: center; 
-}
-
-ul li a:hover {
-    color: #C5A059;
-}
-/* 
-nav {
+/* nav {
     background: var(--nav-bg);
-} */
+}
 
-/* .navbutton {
+.navbutton {
     color: white;
     text-decoration: none;
     background-color: #d39014;
