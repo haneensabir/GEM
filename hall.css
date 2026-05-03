@@ -111,6 +111,14 @@ nav ul li a:hover {
 .navbutton:hover {
     color: #C5A059;
 }
+footer {
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #d4af37;
+}
+
 body[data-theme="dark"] {
     background: #121212 !important;
     color: #E0E0E0 !important;
