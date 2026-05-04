@@ -325,10 +325,10 @@ body.dark .logo h1 {
 }
 
 /* Maintain background and box behavior */
-body.dark {
+/* body.dark {
     background-color: #121212 !important;
    
-}
+} */
 
 body.dark .box {
     background: rgba(30, 30, 30, 0.90);
