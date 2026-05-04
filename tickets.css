@@ -325,10 +325,10 @@ body.dark .logo h1 {
 }
 
 /* Maintain background and box behavior */
-/* body.dark {
+body.dark {
     background-color: #121212 !important;
    
-} */
+}
 
 body.dark .box {
     background: rgba(30, 30, 30, 0.90);
@@ -344,10 +344,10 @@ footer {
     margin-top: auto;
     display :fix
 }
-/* body[data-theme="dark"] {
+body[data-theme="dark"] {
     background: #121212 !important;
     color: #E0E0E0 !important;
-} */
+}
 
 body[data-theme="dark"] header {
     background-color: #1e1e1e;
