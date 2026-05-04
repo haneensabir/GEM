@@ -179,7 +179,7 @@ footer {
 @keyframes fadeInText{
   to{opacity:0.8}
 }
-@media(max-width:768px){
+/* @media(max-width:768px){
   nav{
     flex-direction:column;
     gap:10px;
@@ -191,7 +191,7 @@ footer {
   .container{
     flex-direction:column;
 }
-}
+} */
  nav ul {
     display: flex;
     list-style: none;
