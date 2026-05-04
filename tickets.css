@@ -1,103 +1,383 @@
-/* --- 1. GLOBAL BODY --- */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    /* Your specific background image */
-    background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
+  margin: 0;
+  font-family: Arial;
+  color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*black*/
+  background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    transition: background-color 0.4s ease;
 }
 
-/* --- 2. THE NAVIGATION BAR --- */
+.left {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 400px;
+
+}
+
+.left h2 {
+  font-size: 40px;
+  font-weight: 0;
+  font-family: bold;
+  margin-bottom: 20px;
+}
+
+.left p {
+  color: #bbb;
+  max-width: 400px;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.box {
+  position: absolute;
+  right: 60px;
+  top: 55%;
+  transform: translateY(-50%);
+  width: 420px;
+  background: rgba(241, 236, 236, 0.2);
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+  /*(0,0,0,0.2)*/
+  animation: fadeIn 2s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(20);
+  }
+}
+
+tbody tr {
+  transition: background 0.2s ease;
+}
+
+tbody tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+  /* Subtle highlight when hovering over a row */
+}
+
+/* TITLE */
+.box h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* DAYS STYLE */
+.days {
+  text-align: center;
+  padding-bottom: 10px;
+
+}
+
+.days span {
+  display: inline-block;
+  background: #2a2a2a;
+  padding: 5px 10px;
+  margin: 3px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.days .active {
+  background: gold;
+  color: black;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th {
+  text-align: left;
+  color: rgb(67, 63, 63);
+  font-size: 22px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+td {
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+/* PRICE ALIGN */
+.price {
+  text-align: center;
+  font-weight: 500;
+}
+
+.quantity {
+  text-align: right;
+}
+
+/* COUNTER BUTTONS */
+.counter-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-align: right;
+  font-size: 14px;
+}
+
+.counter-btn:hover {
+  background: #555;
+}
+
+/* TOTAL ROW */
+.total-row td {
+  border-top: 1px solid #444;
+  padding-top: 15px;
+  font-size: 16px;
+}
+
+.total-label {
+  font-weight: bold;
+}
+
+/* PAYMENT BUTTON */
+.payment-btn {
+  width: 100%;
+  padding: 8px;
+  background: gold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+
+}
+
+.payment-btn:hover {
+  background: #e6c200;
+
+}
+
+.box h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color:#C5A059;
+}
+
+
+
+
+.days span {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 3px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+.date-input {
+  width: 100%;
+  padding: 10px;
+  background: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* calendar icon color fix (for Chrome) */
+.date-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* focus effect */
+.date-input:focus {
+  outline: none;
+  background: #333;
+}
+
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    padding: 15px 5%;
+    padding: 15px 5%; 
+    background-color: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: background-color 0.3s, border 0.3s;
 }
 
 .logo h1 {
     margin: 0;
     font-size: 1.8rem;
-    color: #C5A059; /* Your specific color */
+    color: #C5A059; 
+  
 }
 
 nav ul {
     display: flex;
     list-style: none;
     gap: 25px;
+    margin: 0;
+    padding: 0;
 }
-
-nav ul li a, .navbutton {
+nav ul li a {
     text-decoration: none;
+    color: #333;
     font-weight: 500;
     transition: 0.3s;
 }
 
-/* --- 3. LIGHT MODE (Modified Nav) --- */
-body.light {
-    background-color: transparent;
-    color: #000;
+nav ul li a:hover {
+    color: #C5A059;
 }
 
-body.light header {
-    background-color: #ffffff; /* Solid white nav */
+.registration {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-body.light nav ul li a, 
-body.light .navbutton {
-    color: #333; /* Dark text for light nav */
+.modebutton {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #C5A059;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    color:#C5A059
+}
+.navbutton {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-body.light .modebutton {
-    background-color: #333;
-    color: #fff;
-    border: 1px solid #333;
+.navbutton:hover {
+    color: #C5A059;
+}
+.counter-btn:active {
+  transform: scale(0.9);
+  /* Shrinks when clicked */
 }
 
-/* --- 4. DARK MODE (Modified Nav) --- */
-body.dark {
-    /* Tints image darker so white text is readable */
-    background-color: rgba(0, 0, 0, 0.7); 
-    background-blend-mode: darken;
-    color: #fff;
-}
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+
+
+
+
+
+  .box {
+    width: 95%;
+    /* Take up more screen space on small devices */
+    padding: 20px;
+    margin: 10px auto;
+  }
+
+  /* Make the table scrollable if it's too wide */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+ 
 
 body.dark header {
-    background-color: #1e1e1e; /* Dark grey nav */
-    border-bottom: 1px solid #444;
+    background-color: #1e1e1e;
 }
 
-body.dark nav ul li a, 
+/* Target nav links and buttons when body has .dark class */
+body.dark nav ul li a,
 body.dark .navbutton {
-    color: #ffffff; /* White text for dark nav */
+    color: #E0E0E0;
 }
 
 body.dark .modebutton {
-    background-color: #ffffff;
-    color: #1e1e1e;
-    border: 1px solid #C5A059; /* Your gold color as border */
+    border-color: #C5A059;
+    color: #C5A059;
+}
+body.dark .logo h1 {
+    color: #C5A059;
 }
 
-/* --- 5. THE CONTENT BOXES --- */
-body.light .box {
-    background: rgba(255, 255, 255, 0.9);
-    color: black;
+/* Maintain background and box behavior */
+body.dark {
+    background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
+   
+}
+body.light{
+   background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
 }
 
 body.dark .box {
-    background: rgba(30, 30, 30, 0.95);
+    background: rgba(30, 30, 30, 0.90);
     color: white;
 }
 
-.box h1 {
-    color: #C5A059; /* Your gold color for the box title */
+footer {
+    text-decoration: none;
+    text-align: center;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #d4af37;
+    margin-top: auto;
+    display :fix
+}
+body[data-theme="dark"] {
+     background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #E0E0E0 !important;
+}
+
+body[data-theme="dark"] header {
+    background-color: #1e1e1e;
+}
+body[data-theme="light"]header{
+  background-color:#fff;}
+
+body[data-theme="dark"] 
+nav ul li a,
+body[data-theme="dark"] .navbutton {
+    color: #E0E0E0;
+}
+
+body[data-theme="dark"] .modebutton {
+    border-color: #C5A059;
+    color: #C5A059;
+}
+body[data-theme="dark"] nav ul li a:hover {
+    color: #C5A059;
+}
+ 
+body.dark nav ul li a,
+body.dark .navbutton {
+    color: white; /* Keeps them white in dark mode too */
 }
