@@ -5,7 +5,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /*black*/
 }
 
 .left {
@@ -65,16 +64,13 @@ tbody tr {
 
 tbody tr:hover {
   background: rgba(255, 255, 255, 0.03);
-  /* Subtle highlight when hovering over a row */
 }
 
-/* TITLE */
 .box h1 {
   font-size: 30px;
   margin-bottom: 15px;
 }
 
-/* DAYS STYLE */
 .days {
   text-align: center;
   padding-bottom: 10px;
@@ -96,7 +92,6 @@ tbody tr:hover {
   color: black;
 }
 
-/* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -116,7 +111,6 @@ td {
   font-size: 16px;
 }
 
-/* PRICE ALIGN */
 .price {
   text-align: center;
   font-weight: 500;
@@ -126,7 +120,6 @@ td {
   text-align: right;
 }
 
-/* COUNTER BUTTONS */
 .counter-btn {
   background: #333;
   color: white;
@@ -142,7 +135,6 @@ td {
   background: #555;
 }
 
-/* TOTAL ROW */
 .total-row td {
   border-top: 1px solid #444;
   padding-top: 15px;
@@ -153,7 +145,6 @@ td {
   font-weight: bold;
 }
 
-/* PAYMENT BUTTON */
 .payment-btn {
   width: 100%;
   padding: 8px;
@@ -200,13 +191,11 @@ td {
   cursor: pointer;
 }
 
-/* calendar icon color fix (for Chrome) */
 .date-input::-webkit-calendar-picker-indicator {
   filter: invert(1);
   cursor: pointer;
 }
 
-/* focus effect */
 .date-input:focus {
   outline: none;
   background: #333;
@@ -272,10 +261,8 @@ nav ul li a:hover {
 }
 .counter-btn:active {
   transform: scale(0.9);
-  /* Shrinks when clicked */
 }
 
-/* MOBILE RESPONSIVENESS */
 @media screen and (max-width: 768px) {
   .header {
     padding: 10px;
@@ -287,12 +274,10 @@ nav ul li a:hover {
 
   .box {
     width: 95%;
-    /* Take up more screen space on small devices */
     padding: 20px;
     margin: 10px auto;
   }
 
-  /* Make the table scrollable if it's too wide */
   table {
     display: block;
     overflow-x: auto;
@@ -302,7 +287,6 @@ nav ul li a:hover {
   h2,
   h1 {
     font-size: 1.5rem;
-    /* Shrink text so it fits */
   }
 }
 
@@ -310,7 +294,6 @@ body.dark header {
     background-color: #1e1e1e;
 }
 
-/* Target nav links and buttons when body has .dark class */
 body.dark nav ul li a,
 body.dark .navbutton {
     color: #E0E0E0;
@@ -324,7 +307,6 @@ body.dark .logo h1 {
     color: #C5A059;
 }
 
-/* Maintain background and box behavior */
 body.dark {
    background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
    
@@ -370,5 +352,5 @@ body[data-theme="dark"] nav ul li a:hover {
 }
 body.dark nav ul li a,
 body.dark .navbutton {
-    color: white; /* Keeps them white in dark mode too */
+    color: white;
 }
