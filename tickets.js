@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // 1. Grab all the rows
+    // --- 1. TICKET COUNTER LOGIC ---
     const rows = document.querySelectorAll('.ticket-row');
     const totalDisplay = document.getElementById('grand-total');
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const countSpan = row.querySelector('.count');
         const price = parseInt(row.querySelector('.price-val').innerText);
 
-        // 2. Click Plus
+        // Click Plus
         plusBtn.addEventListener('click', () => {
             let count = parseInt(countSpan.innerText);
             count++;
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             calculateTotal();
         });
 
-        // 3. Click Minus
+        // Click Minus
         minusBtn.addEventListener('click', () => {
             let count = parseInt(countSpan.innerText);
             if (count > 0) {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // 4. Function to sum everything up
+    // Function to sum everything up
     function calculateTotal() {
         let total = 0;
         rows.forEach(row => {
@@ -38,20 +38,32 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         totalDisplay.innerText = total + " EGP";
     }
-});
-// 1. Get references to the button and the total price display
-const payBtn = document.getElementById("payBtn");
-const grandTotalDisplay = document.getElementById("grand-total");
 
-// 2. Add the click event listener
-payBtn.addEventListener("click", () => {
-    const totalAmount = grandTotalDisplay.textContent;
+    // --- 2. PAYMENT ALERT LOGIC ---
+    const payBtn = document.getElementById("payBtn");
 
-    // Check if the user actually selected any tickets
-    if (totalAmount === "0 EGP" || totalAmount === "0") {
-        alert("Please select at least one ticket before proceeding to payment.");
-    } else {
-        // The actual payment alert
-        alert("Proceeding to payment...\nYour total is: " + totalAmount + "\n\nThank you for booking with GEM!");
-    }
+    payBtn.addEventListener("click", () => {
+        const totalAmount = totalDisplay.textContent;
+
+        // Check if the user actually selected any tickets
+        if (totalAmount === "0 EGP" || totalAmount === "0" || parseInt(totalAmount) === 0) {
+            alert("⚠️ Please select at least one ticket before proceeding to payment.");
+        } else {
+            // The actual payment alert
+            alert("💳 Proceeding to payment...\n\nTotal Amount: " + totalAmount + "\n\nThank you for booking with GEM!");
+        }
+    });
+
+    // --- 3. THEME TOGGLE LOGIC ---
+    const themeBtn = document.getElementById("themeToggle");
+    themeBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        document.body.classList.toggle("light");
+
+        if (document.body.classList.contains("dark")) {
+            themeBtn.textContent = "Light";
+        } else {
+            themeBtn.textContent = "Dark";
+        }
+    });
 });
