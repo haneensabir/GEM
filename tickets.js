@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // --- 1. SELECTIONS ---
     const rows = document.querySelectorAll('.ticket-row');
     const totalDisplay = document.getElementById('grand-total');
-    const payBtn = document.getElementById("payBtn");
+    const payBtn = document.querySelector('.payment-btn'); // Matches your HTML class
 
-    // --- 1. TICKET COUNTER LOGIC ---
+    // --- 2. TICKET COUNTER LOGIC ---
     rows.forEach(row => {
         const plusBtn = row.querySelector('.plus');
         const minusBtn = row.querySelector('.minus');
         const countSpan = row.querySelector('.count');
-        // Tip: Ensure your HTML looks like: <span class="price-val">100</span>
         const price = parseInt(row.querySelector('.price-val').innerText);
 
+        // Increment quantity
         plusBtn.addEventListener('click', () => {
             let count = parseInt(countSpan.innerText);
             count++;
@@ -18,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
             calculateTotal();
         });
 
+        // Decrement quantity
         minusBtn.addEventListener('click', () => {
             let count = parseInt(countSpan.innerText);
             if (count > 0) {
@@ -28,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    // Function to calculate the total sum
     function calculateTotal() {
         let total = 0;
         rows.forEach(row => {
@@ -38,15 +41,16 @@ document.addEventListener('DOMContentLoaded', function () {
         totalDisplay.innerText = total + " EGP";
     }
 
-    // --- 2. PAYMENT ALERT LOGIC ---
-    payBtn.addEventListener("click", () => {
-        // ParseInt will stop at the first non-numeric character (the space before EGP)
-        const totalValue = parseInt(totalDisplay.textContent);
+    // --- 3. PAYMENT VALIDATION ---
+    if (payBtn) {
+        payBtn.addEventListener("click", () => {
+            const totalValue = parseInt(totalDisplay.innerText);
 
-        if (!totalValue || totalValue <= 0) {
-            alert("⚠️ Your cart is empty! Please select at least one ticket.");
-        } else {
-            alert(`💳 Proceeding to payment...\n\nTotal Amount: ${totalValue} EGP\n\nThank you for booking with GEM!`);
-        }
-    });
+            if (!totalValue || totalValue === 0) {
+                alert("⚠️ Your cart is empty! Please select at least one ticket.");
+            } else {
+                alert(`💳 Proceeding to Payment...\n\nTotal: ${totalValue} EGP\n\nThank you for booking with GEM!`);
+            }
+        });
+    }
 });
