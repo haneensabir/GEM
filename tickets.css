@@ -59,6 +59,7 @@ body {
 }
 
 /* ===== TABLE ===== */
+* TABLE */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -67,11 +68,15 @@ table {
 
 th {
   text-align: left;
-  font-size: 20px;
+  color: rgb(67, 63, 63);
+  font-size: 22px;
+  padding-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 td {
   padding: 10px 0;
+  font-size: 16px;
 }
 
 /* ===== BUTTONS ===== */
