@@ -230,6 +230,7 @@ header {
     margin: 0;
     font-size: 1.8rem;
     color: #C5A059; 
+  
 }
 
 nav ul {
@@ -364,6 +365,8 @@ body[data-theme="dark"] {
 body[data-theme="dark"] header {
     background-color: #1e1e1e;
 }
+body[data-theme="light"]header{
+  background-color:#fff;}
 
 body[data-theme="dark"] 
 nav ul li a,
