@@ -281,12 +281,6 @@ nav ul li a:hover {
   /* Shrinks when clicked */
 }
 
-/* MOBILE RESPONSIVENESS */
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 10px;
-  }
-}
 
 
 
