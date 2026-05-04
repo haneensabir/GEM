@@ -13,6 +13,13 @@ body {
     background-repeat: no-repeat;
 }
 
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 10px;
+  }
+}
+
 .left {
   position: absolute;
   left: 40px;
