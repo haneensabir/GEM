@@ -329,6 +329,9 @@ body.dark {
     background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
    
 }
+body.light{
+   background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
+}
 
 body.dark .box {
     background: rgba(30, 30, 30, 0.90);
