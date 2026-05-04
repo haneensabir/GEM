@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /*black*/
+  
   background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
     background-size: cover;
     background-position: center;
