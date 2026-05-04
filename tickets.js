@@ -55,4 +55,3 @@ payBtn.addEventListener("click", () => {
         alert("Proceeding to payment...\nYour total is: " + totalAmount + "\n\nThank you for booking with GEM!");
     }
 });
-});
