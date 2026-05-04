@@ -39,3 +39,19 @@ document.addEventListener('DOMContentLoaded', function () {
         totalDisplay.innerText = total + " EGP";
     }
 });
+// 1. Get references to the button and the total price display
+const payBtn = document.getElementById("payBtn");
+const grandTotalDisplay = document.getElementById("grand-total");
+
+// 2. Add the click event listener
+payBtn.addEventListener("click", () => {
+    const totalAmount = grandTotalDisplay.textContent;
+
+    // Check if the user actually selected any tickets
+    if (totalAmount === "0 EGP" || totalAmount === "0") {
+        alert("Please select at least one ticket before proceeding to payment.");
+    } else {
+        // The actual payment alert
+        alert("Proceeding to payment...\nYour total is: " + totalAmount + "\n\nThank you for booking with GEM!");
+    }
+});
