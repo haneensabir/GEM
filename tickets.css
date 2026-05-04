@@ -381,10 +381,7 @@ body[data-theme="dark"] .modebutton {
 body[data-theme="dark"] nav ul li a:hover {
     color: #C5A059;
 }
-  body[data-theme="dark"].container{
-        background: rgba(30, 30, 30, 0.90);
-    color: white;
-  }
+ 
 body.dark nav ul li a,
 body.dark .navbutton {
     color: white; /* Keeps them white in dark mode too */
