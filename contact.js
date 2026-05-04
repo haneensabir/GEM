@@ -23,7 +23,7 @@ function validateForm() {
   data.push(message);
   localStorage.setItem("contactMessages", JSON.stringify(data));
 
-  alert("Message sent ✅");
+  alert("Message sent ");
 
   
   document.getElementById("name").value = "";
@@ -73,27 +73,6 @@ function submitFeedback() {
 
 
 
-// document.addEventListener("DOMContentLoaded", function () {
 
-//     const btn = document.querySelector(".modebutton");
 
-//     btn.addEventListener("click", function () {
-//         const currentTheme = document.body.getAttribute("data-theme");
 
-//         if (currentTheme === "light") {
-//             document.body.setAttribute("data-theme", "dark");
-//             localStorage.setItem("theme", "dark");
-//         } else {
-//             document.body.setAttribute("data-theme", "light");
-//             localStorage.setItem("theme", "light");
-//         }
-//     });
-
-    
-//     const savedTheme = localStorage.getItem("theme");
-//     if (savedTheme) {
-//         document.body.setAttribute("data-theme", savedTheme);
-//     }
-
-// });
-// });
