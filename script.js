@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded",function(){
         window.location.href = "index.html";
 
 
-        // loginForm.reset();
+        
     } else {
         passError.textContent = "Invalid password";
         password.classList.add("input-error");
@@ -72,17 +72,6 @@ document.addEventListener("DOMContentLoaded",function(){
 }
 
 
-
-    //         if(username === "" || password === "") {
-    //             alert("Please fill all fields");
-    //         } else if(password.length < 8) {
-    //             alert("Password must be at least 8 characters");
-    //         } else {
-    //             alert("Login successful!");
-    //             loginForm.submit();
-    //         }
-    //     });
-    // }
 
 
     const signupForm = document.getElementById("signupForm");
@@ -168,7 +157,6 @@ document.addEventListener("DOMContentLoaded",function(){
     alert("Signup successful!");
     window.location.href = "login.html";
 
-    // signupForm.reset();
 }
 
         });
@@ -176,24 +164,5 @@ document.addEventListener("DOMContentLoaded",function(){
 
 });
 
-//             event.preventDefault();
 
-//             if (name === "" || email === "" || password === "" || confirmPassword === "") {
-//             alert("All fields are required");
-//         } 
-//         else if (password.length < 8) {
-//             alert("Password must be at least 8 characters");
-//         } 
-//         else if (password !== confirmPassword) {
-//             alert("Passwords do not match");
-//         } 
-//         else {
-//             alert("Signup successful!");
-//             signupForm.submit();
-//         }
-//     });
-
-// }
-
-// });
 
