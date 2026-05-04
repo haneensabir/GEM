@@ -81,6 +81,7 @@ body[data-theme="dark"] nav ul li a:hover {
     color: #333;
     font-size: 0.9rem;
     transition: 0.3s;
+    white-space: nowrap;
 }
 
 .navbutton:hover {
