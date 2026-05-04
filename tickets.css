@@ -346,32 +346,25 @@ footer {
     border-radius: 20px;
     color: #d4af37;
 }
-body[data-theme="dark"] {
-     background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #E0E0E0 !important;
-}
 
-body[data-theme="dark"] header {
+
+body.dark. header {
     background-color: #1e1e1e;
 }
-body[data-theme="light"]header{
+body.light.header{
   background-color:#fff;}
 
-body[data-theme="dark"] 
+body.dark.
 nav ul li a,
 body[data-theme="dark"] .navbutton {
     color: #E0E0E0;
 }
 
-body[data-theme="dark"] .modebutton {
+body.dark .modebutton {
     border-color: #C5A059;
     color: #C5A059;
 }
-body[data-theme="dark"] nav ul li a:hover {
+body.dark. nav ul li a:hover {
     color: #C5A059;
 }
  
