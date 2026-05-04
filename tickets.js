@@ -54,16 +54,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // --- 3. THEME TOGGLE LOGIC ---
-    const themeBtn = document.getElementById("themeToggle");
-    themeBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        document.body.classList.toggle("light");
+const payBtn = document.getElementById("payBtn");
+const grandTotalDisplay = document.getElementById("grand-total");
 
-        if (document.body.classList.contains("dark")) {
-            themeBtn.textContent = "Light";
-        } else {
-            themeBtn.textContent = "Dark";
-        }
-    });
+
+
+// Payment Alert Logic
+payBtn.addEventListener("click", () => {
+    const totalAmount = grandTotalDisplay.textContent;
+    
+    if (totalAmount === "0 EGP" || totalAmount === "0") {
+        alert("Your cart is empty! Please add tickets first.");
+    } else {
+        alert("Redirecting to Secure Payment...\nTotal Amount: " + totalAmount);
+    }
 });
