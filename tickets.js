@@ -3,9 +3,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const rows = document.querySelectorAll('.ticket-row');
     const totalDisplay = document.getElementById('grand-total');
     const payBtn = document.querySelector('.payment-btn');
-    const dateInput = document.querySelector('.date-input'); // Selecting the date field
+    const dateInput = document.querySelector('.date-input');
 
-    // --- 2. TICKET COUNTER LOGIC ---
+    // --- 2. LOAD DATA FROM LOCAL STORAGE ---
+    function loadSavedData() {
+        const savedData = JSON.parse(localStorage.getItem('gemBooking'));
+        
+        if (savedData) {
+            // Restore Date
+            if (savedData.date) dateInput.value = savedData.date;
+            
+            // Restore Counts
+            rows.forEach((row, index) => {
+                const countSpan = row.querySelector('.count');
+                if (savedData.counts && savedData.counts[index] !== undefined) {
+                    countSpan.innerText = savedData.counts[index];
+                }
+            });
+            calculateTotal();
+        }
+    }
+
+    // --- 3. SAVE DATA TO LOCAL STORAGE ---
+    function saveData() {
+        const counts = [];
+        rows.forEach(row => {
+            counts.push(parseInt(row.querySelector('.count').innerText));
+        });
+
+        const bookingInfo = {
+            date: dateInput.value,
+            counts: counts
+        };
+
+        localStorage.setItem('gemBooking', JSON.stringify(bookingInfo));
+    }
+
+    // --- 4. TICKET COUNTER LOGIC ---
     rows.forEach(row => {
         const plusBtn = row.querySelector('.plus');
         const minusBtn = row.querySelector('.minus');
@@ -17,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
             count++;
             countSpan.innerText = count;
             calculateTotal();
+            saveData(); // Save every time a change happens
         });
 
         minusBtn.addEventListener('click', () => {
@@ -25,10 +60,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 count--;
                 countSpan.innerText = count;
                 calculateTotal();
+                saveData(); // Save every time a change happens
             }
         });
     });
 
+    // Save date changes
+    dateInput.addEventListener('change', saveData);
+
+    // --- 5. CALCULATION LOGIC ---
     function calculateTotal() {
         let total = 0;
         rows.forEach(row => {
@@ -39,88 +79,28 @@ document.addEventListener('DOMContentLoaded', function () {
         totalDisplay.innerText = total + " EGP";
     }
 
-    // --- 3. PAYMENT & DATE VALIDATION ---
+    // --- 6. PAYMENT VALIDATION ---
     if (payBtn) {
         payBtn.addEventListener("click", () => {
             const totalValue = parseInt(totalDisplay.innerText);
-            const selectedDate = dateInput.value; // Get the chosen date
+            const selectedDate = dateInput.value;
 
-            // Check if date is selected
             if (!selectedDate) {
                 alert("⚠️ Please select a visit date first.");
-                return; // Stop the function here
+                return;
             }
 
-            // Check if at least one ticket is selected
             if (!totalValue || totalValue === 0) {
                 alert("⚠️ Your cart is empty! Please select at least one ticket.");
             } else {
-                alert(`💳 Proceeding to Payment...
+                alert(`💳 Proceeding to Payment...\n\nDate: ${selectedDate}\nTotal: ${totalValue} EGP\n\nThank you for booking with GEM!`);
                 
-Date: ${selectedDate}
-Total: ${totalValue} EGP
-
-Thank you for booking with GEM!`);
+                // Optional: Clear storage after successful "payment"
+                // localStorage.removeItem('gemBooking');
             }
         });
     }
+
+    // Initialize the app by loading data
+    loadSavedData();
 });
-
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     // --- 1. SELECTIONS ---
-//     const rows = document.querySelectorAll('.ticket-row');
-//     const totalDisplay = document.getElementById('grand-total');
-//     const payBtn = document.querySelector('.payment-btn'); // Matches your HTML class
-
-//     // --- 2. TICKET COUNTER LOGIC ---
-//     rows.forEach(row => {
-//         const plusBtn = row.querySelector('.plus');
-//         const minusBtn = row.querySelector('.minus');
-//         const countSpan = row.querySelector('.count');
-//         const price = parseInt(row.querySelector('.price-val').innerText);
-
-//         // Increment quantity
-//         plusBtn.addEventListener('click', () => {
-//             let count = parseInt(countSpan.innerText);
-//             count++;
-//             countSpan.innerText = count;
-//             calculateTotal();
-//         });
-
-//         // Decrement quantity
-//         minusBtn.addEventListener('click', () => {
-//             let count = parseInt(countSpan.innerText);
-//             if (count > 0) {
-//                 count--;
-//                 countSpan.innerText = count;
-//                 calculateTotal();
-//             }
-//         });
-//     });
-
-//     // Function to calculate the total sum
-//     function calculateTotal() {
-//         let total = 0;
-//         rows.forEach(row => {
-//             const count = parseInt(row.querySelector('.count').innerText) || 0;
-//             const price = parseInt(row.querySelector('.price-val').innerText) || 0;
-//             total += count * price;
-//         });
-//         totalDisplay.innerText = total + " EGP";
-//     }
-
-//     // --- 3. PAYMENT VALIDATION ---
-//     if (payBtn) {
-//         payBtn.addEventListener("click", () => {
-//             const totalValue = parseInt(totalDisplay.innerText);
-
-//             if (!totalValue || totalValue === 0) {
-//                 alert("⚠️ Your cart is empty! Please select at least one ticket.");
-//             } else {
-//                 alert(`💳 Proceeding to Payment...\n\nTotal: ${totalValue} EGP\n\nThank you for booking with GEM!`);
-//             }
-//         });
-//     }
-// });
