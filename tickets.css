@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Arial;
+  /* font-family: Arial; */
   color: black;
   min-height: 100vh;
   display: flex;
@@ -340,14 +340,12 @@ body.dark .box {
 }
 
 footer {
-    margin-top: auto;
     text-decoration: none;
     text-align: center;
     padding: 8px 15px;
     border-radius: 20px;
     color: #d4af37;
 }
-
 
 body.dark. header {
     background-color: #1e1e1e;
