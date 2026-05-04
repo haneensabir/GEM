@@ -340,6 +340,7 @@ body.dark .box {
 }
 
 footer {
+    margin-top: auto;
     text-decoration: none;
     text-align: center;
     padding: 8px 15px;
