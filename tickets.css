@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  /* font-family: Arial; */
+  font-family: Arial;
   color: black;
   min-height: 100vh;
   display: flex;
@@ -305,12 +305,12 @@ nav ul li a:hover {
     white-space: nowrap;
   }
 
-  /* h2,
+  h2,
   h1 {
     font-size: 1.5rem;
     /* Shrink text so it fits */
-  /* }
-} */
+  }
+}
 
 body.dark header {
     background-color: #1e1e1e;
