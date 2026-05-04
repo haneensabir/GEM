@@ -263,10 +263,7 @@ nav ul li a:hover {
   transform: scale(0.9);
 }
 
-@media screen and (max-width: 768px) {
-  .header {
-    padding: 10px;
-  }
+
 
 
 
