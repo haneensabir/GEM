@@ -7,7 +7,7 @@
 <title>Grand Egyptian Museum</title>
 
 </head>
-<div class="full">
+
 <body>
     
 <div>
@@ -159,19 +159,12 @@
 
 </section>
 
- <div id="modal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-   <img id="modalImg">
-   <p id="modalText"></p>
- </div>
 
 <script>
 
 const input = document.getElementById("searchInput");
 const items = document.querySelectorAll(".gallery-item");
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const modalText = document.getElementById("modalText");
+
 
 input.addEventListener("keyup", () => {
     const value = input.value.toLowerCase().trim();
@@ -188,26 +181,6 @@ input.addEventListener("keyup", () => {
     });
 });
 
-items.forEach(item => {
-    item.addEventListener("click", () => {
-        const img = item.querySelector("img");
-        const text = item.querySelector("p").innerText;
-
-        modal.style.display = "block";
-        modalImg.src = img.src;
-        modalText.innerText = text;
-    });
-});
-
-window.onclick = (e) => {
-    if (e.target == modal) {
-        modal.style.display = "none";
-    }
-};
-
-function closeModal() {
-    modal.style.display = "none";
-}
 </script>
 </body>
 <footer>
