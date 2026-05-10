@@ -307,7 +307,7 @@ footer {
     display :fix
 }
 body[data-theme="dark"] {
-    background: #121212 !important;
+     background-image: url('WhatsApp Image 2026-04-29 at 12.31.39 AM.jpeg');
     color: #E0E0E0 !important;
 }
 
