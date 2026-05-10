@@ -140,9 +140,6 @@ td {
 
 
 
-
-
-
 .date-input {
   width: 100%;
   padding: 10px;
@@ -181,7 +178,6 @@ header {
     letter-spacing: 2px;
     text-decoration: none; 
 }
-
 nav ul {
     display: flex;
     list-style: none;
