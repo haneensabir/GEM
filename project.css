@@ -154,30 +154,6 @@ body {
     text-align: center;
     padding-top: 50px;
 }
-
-.modal img {
-    max-width: 80%;
-    max-height: 70%;
-}
-
-.modal p {
-    color: white;
-    margin-top: 10px;
-}
-
-.close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-#modalText {
-    font-size: 18px;
-    transition: font-size 0.3s ease;
-}
-/* الدارك مود */
 [data-theme="dark"] body {
     background: #121212;
     color: #e0e0e0;
