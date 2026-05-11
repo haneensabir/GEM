@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     for (let i = 0; i < users.length; i++) {
         if (
-            users[i].email === username.value &&
+            users[i].username === username.value &&
             users[i].password === password.value
         ) {
             found = true;
