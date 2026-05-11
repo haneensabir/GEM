@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
             if (name.value === "") {
-                nameError.textContent = "Name is required";
+                nameError.textContent = "Username is required";
                 name.classList.add("input-error");
                 valid = false;
             }
