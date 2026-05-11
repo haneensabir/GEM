@@ -2,12 +2,30 @@ h1,.h{
     text-align: center;
     color: #C5A059;
 }
-.container {
+.container{
   display: flex;
   gap: 20px;
   flex-wrap: wrap; 
   justify-content: center;
 }
+body.active .container{
+    flex-direction: column;
+    align-items: center;
+}
+body.active .ss{
+    transform:scale(1.03);
+    width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px;
+}
+body.active .ss img{
+     width:250px;
+    height:200px;
+    border-radius:10px;
+}
+
 .ss {
   background: #fff;
   position: relative;
@@ -68,7 +86,6 @@ header {
     font-size: 1.8rem;
     color: #C5A059; 
 }
-
 nav ul {
     display: flex;
     list-style: none;
@@ -80,6 +97,14 @@ nav ul li a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: 0.3s;
+}
+#layout{
+     padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: transparent;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -134,6 +159,10 @@ body[data-theme="dark"] .navbutton {
 }
 
 body[data-theme="dark"] .modebutton {
+    border-color: #C5A059;
+    color: #C5A059;
+}
+body[data-theme="dark"] #layout{
     border-color: #C5A059;
     color: #C5A059;
 }
