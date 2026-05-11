@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
     for (let i = 0; i < users.length; i++) {
         if (
-            users[i].username === username.value &&
+            users[i].name === username.value &&
             users[i].password === password.value
         ) {
             found = true;
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded",function(){
 
         
     } else {
-        passError.textContent = "Invalid password";
+        passError.textContent = "Invalid username or password";
         password.classList.add("input-error");
     }
 }
