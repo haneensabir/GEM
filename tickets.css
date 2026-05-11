@@ -212,6 +212,37 @@ nav ul li a:hover {
     align-items: center;
     gap: 15px;
 }
+body.alt-layout .left {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+  margin: 20px auto;
+  text-align: center;
+}
+
+body.alt-layout .box {
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: none;
+  margin: 20px auto;
+}
+
+
+body.alt-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.layoutBtn{ padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #C5A059;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    color:#C5A059
+}
 
 .modebutton {
     padding: 8px 18px;
