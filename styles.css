@@ -151,6 +151,7 @@ p {
   border: 1px solid rgba(255,255,255,0.2);
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   width: 500px;
+  margin-top: 10px;
 
 }
 
@@ -219,6 +220,7 @@ input[type="submit"] {
   border-radius: 10px;
   width: 600px;
   text-align: center;
+  margin-top: 10px;
 
 }
 
@@ -261,4 +263,90 @@ input {
 
 .input-error {
     border: 2px solid red;
+}
+
+
+
+
+.layout-container {
+    display: flex;
+    min-height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    position: relative;
+    padding-top: 50px;
+}
+
+
+.layout-container.split-layout .image-side {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    height:100%;
+}
+
+.layout-container.split-layout .box {
+    width: 50%;
+    margin: 0;
+    flex-direction: row;
+    margin-top: 60px;
+}
+
+.layout-container.split-layout .box3 {
+    width: 50%;
+    margin: 0;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.layout-container,
+.box,
+.image-side {
+    transition: 0.5s;
+}
+
+.layout-container,
+.box3,
+.image-side {
+    transition: 0.5s;
+}
+
+
+
+.overlay-text {
+    text-align: center;
+    margin-bottom: 5px;
+    color:white;
+}
+
+.layout-container.split-layout .overlay-text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.layout-container.split-layout {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+
+#layout{
+     padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    background: transparent;
+    cursor: pointer;
+    transition: 0.3s;
 }
