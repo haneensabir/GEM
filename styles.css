@@ -49,6 +49,7 @@ body[data-theme="dark"] nav ul li a:hover {
     background: transparent;
     cursor: pointer;
     transition: 0.3s;
+    white-space: nowrap;
 }
 .navbutton {
     text-decoration: none;
