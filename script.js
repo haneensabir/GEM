@@ -165,4 +165,13 @@ document.addEventListener("DOMContentLoaded",function(){
 });
 
 
+const layout = document.getElementById("layout");
+const layoutContainer = document.querySelector(".layout-container");
+
+layout.addEventListener("click", function () {
+
+    layoutContainer.classList.toggle("split-layout");
+
+ });
+
 
