@@ -62,7 +62,10 @@ body[data-theme="dark"] nav ul li a:hover {
     color: #C5A059;
 }
 
-
+body[data-theme="dark"] #layout{
+    border-color: #C5A059;
+    color: #C5A059;
+}
 
 body[data-theme="dark"] header {
     background-color: #1e1e1e;
